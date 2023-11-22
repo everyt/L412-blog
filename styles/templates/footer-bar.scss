@@ -1,0 +1,31 @@
+.footerbar-container-01 {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  backdrop-filter: brightness(110%), blur(5px);
+  border: 0px solid black;
+  border-top-width: 1px;
+  z-index: 1412;
+}
+
+.footerbar-container-02 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerbar-copyright .footerbar-icon {
+  color: gray;
+}
+
+.footerbar-copyright {
+  font-size: 0.8rem;
+}
+
+.footerbar-icon {
+  font-size: 2rem;
+}
