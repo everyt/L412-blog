@@ -30,7 +30,7 @@ export default function FooterBar() {
             },
           ]}
         />
-        <div className='footerbar-copyright' style={{ color: `hsla(${hue},50%,50%,.35)` }}>
+        <div className='footerbar-copyright' style={{ color: `hsla(${hue - 5},50%,50%,1)` }}>
           <span>©2023 Everyt.</span>
           <span>All rights reserved.</span>
         </div>

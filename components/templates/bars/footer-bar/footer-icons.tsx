@@ -11,6 +11,7 @@ import { getHueState } from 'States/getHueState';
 type FooterBarProps = {
   iconArray: iconArrayType[];
 };
+
 type iconArrayType = {
   key: number;
   icon: string;
@@ -29,7 +30,7 @@ export default function Icons({ iconArray }: FooterBarProps) {
     <motion.div
       key={_.key}
       className='footerbar-icon'
-      style={{ color: `hsla(${hue},${40 + _.key * 5}%,${30 + _.key * 10}%,.${50 - _.key * 7})` }}
+      style={{ color: `hsla(${hue + _.key * 10},${40}%,${50}%,1)` }}
       whileHover={{
         scale: 1.2,
         transition: { duration: 0.3 },

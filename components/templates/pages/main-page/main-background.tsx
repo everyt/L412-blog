@@ -27,7 +27,7 @@ const Background = () => {
   let maxHeight: number, minHeight: number;
   let maxSpeed = 40;
   let minSpeed = 6;
-  let hueDif = 50;
+  let hueDif = 40;
   let glow = 10;
 
   window.onresize = function () {
@@ -111,11 +111,11 @@ const Background = () => {
   }, []);
 
   return (
-    <>
+    <div className='main-background-container'>
       <div id='bg_glow' />
       <div id='overlay' />
       <canvas id='canvas' />
-    </>
+    </div>
   );
 };
 

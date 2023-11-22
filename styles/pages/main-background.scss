@@ -1,9 +1,10 @@
-html,
-body {
-  overflow: hidden;
-  background: #000;
-  padding: 0px;
-  margin: 0px;
+.main-background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
 #canvas {
