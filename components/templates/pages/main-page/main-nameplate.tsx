@@ -10,7 +10,7 @@ export default function Nameplate() {
     window.scrollTo({
       behavior: 'smooth',
       left: 0,
-      top: window.innerHeight,
+      top: document.documentElement.clientHeight,
     });
   };
 
@@ -19,11 +19,11 @@ export default function Nameplate() {
       <span style={{ color: `hsla(${hue},95%,80%,1)` }} className='main-nameplate-text-small'>
         안녕하세요!
       </span>
-      <span style={{ color: `hsla(${hue + 30},95%,80%,1)` }} className='main-nameplate-text-big'>
+      <span style={{ color: `hsla(${hue > 180 ? hue - 30 : hue + 30},95%,80%,1)` }} className='main-nameplate-text-big'>
         개발자 <span style={{ color: 'white' }}>곽태웅</span>입니다.
       </span>
       <div className='main-nameplate-button' onClick={handleClickButton}>
-        자세히 알아보기
+        저를 소개합니다
       </div>
     </article>
   );

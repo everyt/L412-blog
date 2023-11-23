@@ -22,8 +22,8 @@ const Background = () => {
   let bgg: HTMLDivElement;
   let h: number, w: number;
   let dots: Dot[] = [];
-  let maxWidth = 50;
-  let minWidth = 5;
+  let maxWidth = 30;
+  let minWidth = 2;
   let maxHeight: number, minHeight: number;
   let maxSpeed = 40;
   let minSpeed = 6;
@@ -36,7 +36,7 @@ const Background = () => {
     maxHeight = h * 0.9;
     minHeight = h * 0.5;
     dots = [];
-    pushDots(w / 15);
+    pushDots(w / 45 );
     ctx.globalCompositeOperation = 'lighter';
   };
 
@@ -88,8 +88,6 @@ const Background = () => {
 
       w = window.innerWidth;
       h = window.innerHeight;
-      maxWidth = 15;
-      minWidth = 2;
       maxHeight = w * 0.9;
       minHeight = h * 0.5;
 
@@ -104,7 +102,7 @@ const Background = () => {
 
       ctx.globalCompositeOperation = 'lighter';
 
-      pushDots(w / 15);
+      pushDots(w / 45);
 
       render();
     }

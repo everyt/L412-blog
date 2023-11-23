@@ -1,0 +1,24 @@
+@import '../globals.scss';
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: inherit;
+}
+.index-header {
+  display: flex;
+  background: linear-gradient(rgb(10, 10, 10), $black);
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: inherit;
+}
+.index-article {
+  display: flex;
+  background-color: $white;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: inherit;
+}

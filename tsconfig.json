@@ -6,7 +6,8 @@
       "Styles/*": ["styles/*"],
       "Hooks/*": ["hooks/*"],
       "Models/*": ["models/*"],
-      "States/*": ["states/*"]
+      "States/*": ["states/*"],
+      "Bin/*": ["bin/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

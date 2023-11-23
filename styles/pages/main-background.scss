@@ -1,9 +1,11 @@
+@import '../globals.scss';
+
 .main-background-container {
   position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: inherit;
   background-color: black;
 }
 
@@ -17,9 +19,9 @@
 #overlay {
   background: radial-gradient(
     ellipse at center,
-    rgba(0, 0, 0, 0.3) 10%,
-    rgba(0, 0, 0, 0.8) 50%,
-    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 85%,
     rgba(0, 0, 0, 1) 100%
   );
   z-index: 3;
@@ -27,7 +29,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: inherit;
 }
 
 #bg_glow {
@@ -36,5 +38,5 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: inherit;
 }

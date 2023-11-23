@@ -12,7 +12,7 @@
   z-index: 1412;
   height: 10vh;
   min-height: 70px;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
 }
 
 .footerbar-container-02 {

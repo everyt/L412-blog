@@ -1,12 +1,9 @@
 import 'Styles/templates/footer-bar.scss';
 
 import Icons from './footer-icons';
-
-import { useRecoilValue } from 'recoil';
-import { getHueState } from 'States/getHueState';
+import Copyright from './footer-copyright';
 
 export default function FooterBar() {
-  const hue = useRecoilValue(getHueState);
 
   return (
     <footer className='footerbar-container-01'>
@@ -30,10 +27,7 @@ export default function FooterBar() {
             },
           ]}
         />
-        <div className='footerbar-copyright' style={{ color: `hsla(${hue - 5},50%,50%,1)` }}>
-          <span>©2023 Everyt.</span>
-          <span>All rights reserved.</span>
-        </div>
+        <Copyright />
       </section>
     </footer>
   );
