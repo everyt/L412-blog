@@ -37,19 +37,19 @@ export default function Icons({ iconArray }: FooterBarProps) {
       color: `hsla(${hue},40%,50%,.9)`
     },
     light1 : {
-      color: `hsla(${hue},70%,76%,1)`
+      color: `hsla(25, 100%, 97%,.8)`
     },
     dark2 : {
       color: `hsla(${hue + 10},40%,50%,.9)`
     },
     light2 : {
-      color: `hsla(${hue + 10},70%,76%,1)`
+      color: `hsla(25, 100%, 97%,.8)`
     },
     dark3 : {
       color: `hsla(${hue + 20},40%,50%,.9)`
     },
     light3 : {
-      color: `hsla(${hue + 20},70%,76%,1)`
+      color: `hsla(25, 100%, 97%,.8)`
     },
   }
 
@@ -57,6 +57,7 @@ export default function Icons({ iconArray }: FooterBarProps) {
     <motion.div
       key={_.key}
       className='footerbar-icon'
+      initial={`dark${_.key}`}
       variants={variants}
       animate={isScreenBlack ? `light${_.key}` : `dark${_.key}`}
       transition={{

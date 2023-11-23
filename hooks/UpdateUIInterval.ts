@@ -13,7 +13,6 @@ const UpdateUIInterval = () => {
         y: window.innerHeight,
         scrollTop: document.body.scrollTop,
       });
-      console.log(uiState);
     };
     const intervalId = setInterval(updateUI, 100);
     return () => clearInterval(intervalId);

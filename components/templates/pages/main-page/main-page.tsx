@@ -1,7 +1,10 @@
 import 'Styles/pages/main-page.scss';
 
 import Nameplate from './main-nameplate';
-import Background from './main-background';
+
+import { lazy } from 'react';
+
+const Background = lazy(() => import('./main-background'));
 
 export default function MainPage() {
   return (

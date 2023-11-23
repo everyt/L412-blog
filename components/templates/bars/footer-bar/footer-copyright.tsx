@@ -17,18 +17,20 @@ export default function Copyright() {
         color: `hsla(${hue},60%,60%,.9)`
       },
       light : {
-        color: `hsla(${hue},90%,80%,1)`
+        color: `hsla(25, 100%, 97%,.8)`
       },
     }
 
     return (
-        <motion.div className='footerbar-copyright'
-        variants={variants}
-        animate={isScreenBlack ? `light` : `dark`}
-        transition={{
-          duration: 1,
-          ease: 'easeInOut',
-        }}>
+        <motion.div
+          className='footerbar-copyright'
+          initial='dark'
+          variants={variants}
+          animate={isScreenBlack ? `light` : `dark`}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut',
+          }}>
           <span>©2023 Everyt.</span>
           <span>All rights reserved.</span>
         </motion.div>

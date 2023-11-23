@@ -22,7 +22,7 @@ const Background = () => {
   let bgg: HTMLDivElement;
   let h: number, w: number;
   let dots: Dot[] = [];
-  let maxWidth = 30;
+  let maxWidth = 50;
   let minWidth = 2;
   let maxHeight: number, minHeight: number;
   let maxSpeed = 40;
@@ -36,7 +36,7 @@ const Background = () => {
     maxHeight = h * 0.9;
     minHeight = h * 0.5;
     dots = [];
-    pushDots(w / 45 );
+    pushDots(w / 60);
     ctx.globalCompositeOperation = 'lighter';
   };
 
@@ -102,7 +102,7 @@ const Background = () => {
 
       ctx.globalCompositeOperation = 'lighter';
 
-      pushDots(w / 45);
+      pushDots(w / 60);
 
       render();
     }
@@ -112,6 +112,7 @@ const Background = () => {
     <div className='main-background-container'>
       <div id='bg_glow' />
       <div id='overlay' />
+      <div id='overlay2' />
       <canvas id='canvas' />
     </div>
   );
