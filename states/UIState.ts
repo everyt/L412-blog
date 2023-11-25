@@ -5,6 +5,6 @@ export const UIState = atom({
   default: {
     x: window.innerWidth,
     y: window.innerHeight,
-    scrollTop: document.body.scrollTop,
-  }
+    scrollY: window.scrollY,
+  },
 });

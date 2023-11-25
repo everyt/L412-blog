@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { UIState } from '../states/UIState';
 
-const UpdateUIInterval = () => {
+const updateUIInterval = () => {
   const [uiState, setUIState] = useRecoilState(UIState);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const UpdateUIInterval = () => {
       setUIState({
         x: window.innerWidth,
         y: window.innerHeight,
-        scrollTop: document.body.scrollTop,
+        scrollY: document.body.scrollTop,
       });
     };
     const intervalId = setInterval(updateUI, 100);
@@ -21,4 +21,4 @@ const UpdateUIInterval = () => {
   return uiState;
 };
 
-export default UpdateUIInterval;
+export default updateUIInterval;

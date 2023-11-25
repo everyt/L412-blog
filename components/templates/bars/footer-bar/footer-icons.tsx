@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { useRecoilValue } from 'recoil';
 import { getHueState } from 'States/getHueState';
 
-import UpdateUIInterval from 'Hooks/UpdateUIInterval';
+import updateUIInterval from 'Hooks/updateUIInterval';
 
 type FooterBarProps = {
   iconArray: iconArrayType[];
@@ -23,9 +23,9 @@ type iconArrayType = {
 export default function Icons({ iconArray }: FooterBarProps) {
   const hue = useRecoilValue(getHueState);
 
-  const UI = UpdateUIInterval();
+  const UI = updateUIInterval();
 
-  const isScreenBlack = UI.scrollTop > 200;
+  const isScreenBlack = UI.scrollY > 200;
 
   const handleClickIcon = (event: React.MouseEvent, href: string) => {
     event.stopPropagation();
@@ -33,25 +33,25 @@ export default function Icons({ iconArray }: FooterBarProps) {
   };
 
   const variants = {
-    dark1 : {
-      color: `hsla(${hue},40%,50%,.9)`
+    dark1: {
+      color: `hsla(${hue},40%,50%,.9)`,
     },
-    light1 : {
-      color: `hsla(25, 100%, 97%,.8)`
+    light1: {
+      color: `hsla(25, 100%, 97%,.8)`,
     },
-    dark2 : {
-      color: `hsla(${hue + 10},40%,50%,.9)`
+    dark2: {
+      color: `hsla(${hue + 10},40%,50%,.9)`,
     },
-    light2 : {
-      color: `hsla(25, 100%, 97%,.8)`
+    light2: {
+      color: `hsla(25, 100%, 97%,.8)`,
     },
-    dark3 : {
-      color: `hsla(${hue + 20},40%,50%,.9)`
+    dark3: {
+      color: `hsla(${hue + 20},40%,50%,.9)`,
     },
-    light3 : {
-      color: `hsla(25, 100%, 97%,.8)`
+    light3: {
+      color: `hsla(25, 100%, 97%,.8)`,
     },
-  }
+  };
 
   return iconArray.map((_) => (
     <motion.div

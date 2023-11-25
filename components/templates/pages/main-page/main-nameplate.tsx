@@ -7,10 +7,10 @@ export default function Nameplate() {
   const hue = useRecoilValue(getHueState);
 
   const handleClickButton = () => {
-    window.scrollTo({
+    const height = window.innerHeight;
+    window.scrollBy({
       behavior: 'smooth',
-      left: 0,
-      top: document.documentElement.clientHeight,
+      top: height,
     });
   };
 
@@ -23,7 +23,7 @@ export default function Nameplate() {
         개발자 <span style={{ color: 'white' }}>곽태웅</span>입니다.
       </span>
       <div className='main-nameplate-button' onClick={handleClickButton}>
-        저를 소개합니다
+        소개할게요
       </div>
     </article>
   );

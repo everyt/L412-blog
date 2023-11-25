@@ -1,14 +1,12 @@
 import 'Styles/pages/index-page.scss';
+import Introduce from './index-introduce';
 
 export default function IndexPage() {
   return (
-    <main className='index-container'>
-        <header className='index-header'>
-
-        </header>
-        <article className='index-article'>
-
-        </article>
-    </main>
+    <section className='index-container'>
+      <article className='index-article'>
+        <Introduce />
+      </article>
+    </section>
   );
 }

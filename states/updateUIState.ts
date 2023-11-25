@@ -8,6 +8,16 @@ export const updateUIState = selector({
     return ui;
   },
   set: ({ set }, newValue) => {
-    set(UIState, newValue)
-  }
+    set(
+      UIState,
+      [newValue].map((v) => {
+        const obj = v as { x: number; y: number; scrollY: number; currentPage: number };
+        return {
+          x: obj.x,
+          y: obj.y,
+          scrollY: obj.scrollY,
+        };
+      })[0],
+    );
+  },
 });

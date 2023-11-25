@@ -8,9 +8,9 @@ const Background = lazy(() => import('./main-background'));
 
 export default function MainPage() {
   return (
-    <main className='main-container'>
+    <section className='main-container'>
       <Background />
       <Nameplate />
-    </main>
+    </section>
   );
 }

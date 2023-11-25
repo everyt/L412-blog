@@ -4,7 +4,6 @@ import Icons from './footer-icons';
 import Copyright from './footer-copyright';
 
 export default function FooterBar() {
-
   return (
     <footer className='footerbar-container-01'>
       <section className='footerbar-container-02'>
