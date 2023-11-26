@@ -1,4 +1,4 @@
-import 'Styles/pages/main-page.scss';
+import 'Styles/templates/pages/main-page/main-page.scss';
 
 import Nameplate from './main-nameplate';
 

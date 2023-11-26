@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { UIState } from '../states/UIState';
 
-const updateUIInterval = () => {
+const useUpdateUIInterval = () => {
   const [uiState, setUIState] = useRecoilState(UIState);
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const updateUIInterval = () => {
   return uiState;
 };
 
-export default updateUIInterval;
+export default useUpdateUIInterval;

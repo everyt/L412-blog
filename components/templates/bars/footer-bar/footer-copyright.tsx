@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 
 import { useRecoilValue } from 'recoil';
-import { getHueState } from 'States/getHueState';
+import { getHueState } from 'States/hueState';
 
-import UpdateUIInterval from 'Hooks/updateUIInterval';
+import useUpdateUIInterval from 'Hooks/useUpdateUIInterval';
 
 export default function Copyright() {
   const hue = useRecoilValue(getHueState);
 
-  const UI = UpdateUIInterval();
+  const UI = useUpdateUIInterval();
 
   const isScreenBlack = UI.scrollY > 200;
 

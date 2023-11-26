@@ -1,10 +1,10 @@
 import 'Styles/routes/main-route.scss';
 
-import { MainPage } from '..';
+import { MainPage } from '../templates';
 
 import { lazy, useEffect, useRef } from 'react';
 
-const IndexPage = lazy(() => import('../pages/index-page/index-page'));
+const IndexPage = lazy(() => import('../templates/pages/index-page/index-page'));
 
 export default function MainRoute() {
   const wheelDirection = useRef('down');

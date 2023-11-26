@@ -1,7 +1,7 @@
-import 'Styles/pages/main-nameplate.scss';
+import 'Styles/templates/pages/main-page/main-nameplate.scss';
 
 import { useRecoilValue } from 'recoil';
-import { getHueState } from 'States/getHueState';
+import { getHueState } from 'States/hueState';
 
 export default function Nameplate() {
   const hue = useRecoilValue(getHueState);
@@ -20,7 +20,7 @@ export default function Nameplate() {
         안녕하세요!
       </span>
       <span style={{ color: `hsla(${hue > 180 ? hue - 30 : hue + 30},95%,80%,1)` }} className='main-nameplate-text-big'>
-        개발자 <span style={{ color: 'white' }}>곽태웅</span>입니다.
+        <span style={{ color: 'white' }}>곽태웅</span>입니다.
       </span>
       <div className='main-nameplate-button' onClick={handleClickButton}>
         소개할게요

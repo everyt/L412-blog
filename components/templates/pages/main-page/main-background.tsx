@@ -1,7 +1,9 @@
-import 'Styles/pages/main-background.scss';
+import 'Styles/templates/pages/main-page/main-background.scss';
+
 import { useEffect, useRef } from 'react';
+
 import { useRecoilValue } from 'recoil';
-import { getHueState } from 'States/getHueState';
+import { getHueState } from 'States/hueState';
 
 type Dot = {
   x: number;
@@ -14,6 +16,7 @@ type Dot = {
 
 const Background = () => {
   const isMount = useRef(false);
+  const requestId = useRef(0);
 
   const hue = useRecoilValue(getHueState);
 
@@ -79,11 +82,24 @@ const Background = () => {
         dots[i].x = w;
       }
     }
-    window.requestAnimationFrame(render);
+    requestId.current = requestAnimationFrame(render);
   };
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) {
+        requestId.current = requestAnimationFrame(render);
+      } else {
+        cancelAnimationFrame(requestId.current);
+      }
+    },
+    { threshold: [0] },
+  );
 
   useEffect(() => {
     if (!isMount.current) {
+      observer.observe(document.querySelector('.main-background-container')!);
+
       isMount.current = true;
 
       w = window.innerWidth;

@@ -2,7 +2,8 @@ import 'Styles/App.scss';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import { FooterBar, MainRoute, NotFoundRoute } from 'Components/templates';
+import { FooterBar } from 'Components/templates';
+import { MainRoute, NotFoundRoute } from 'Components/routes';
 
 export default function App() {
   return (

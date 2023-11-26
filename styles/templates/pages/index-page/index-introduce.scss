@@ -1,6 +1,7 @@
-@import '../globals.scss';
+@import '../../../globals.scss';
 
 .index-introduce-container {
+  z-index: 10;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -10,26 +11,28 @@
   width: 100vw;
 }
 .index-introduce-background1 {
-  background-color: $black;
-  height: 100vh;
+  background: linear-gradient(black, $black);
+  height: 100%;
   width: 20vw;
 }
 .index-introduce-img {
+  z-index: 1;
+  position: absolute;
+  top: 32vh;
+  left: 14vw;
+  height: 250px;
+  width: 230px;
+  border-radius: 0 30px 0 30px;
+}
+.index-introduce-img-overlay {
   z-index: 2;
+  border: 2px solid #ccc;
   position: absolute;
   top: 30vh;
   left: 13vw;
   height: 250px;
   width: 230px;
-}
-.index-introduce-img-overlay {
-  z-index: 1;
-  border: 2px solid black;
-  position: absolute;
-  top: 33vh;
-  left: 14.5vw;
-  height: 250px;
-  width: 230px;
+  border-radius: 0 30px 0 30px;
 }
 .index-introdue-text {
   margin-top: 42vh;

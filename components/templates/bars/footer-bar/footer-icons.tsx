@@ -1,14 +1,14 @@
 'use client';
 
-import 'Styles/templates/footer-icons.scss';
+import 'Styles/templates/bar/footer-bar/footer-icons.scss';
 
 import { Icon } from '@iconify-icon/react';
 import { motion } from 'framer-motion';
 
 import { useRecoilValue } from 'recoil';
-import { getHueState } from 'States/getHueState';
+import { getHueState } from 'States/hueState';
 
-import updateUIInterval from 'Hooks/updateUIInterval';
+import useUpdateUIInterval from 'Hooks/useUpdateUIInterval';
 
 type FooterBarProps = {
   iconArray: iconArrayType[];
@@ -23,7 +23,7 @@ type iconArrayType = {
 export default function Icons({ iconArray }: FooterBarProps) {
   const hue = useRecoilValue(getHueState);
 
-  const UI = updateUIInterval();
+  const UI = useUpdateUIInterval();
 
   const isScreenBlack = UI.scrollY > 200;
 

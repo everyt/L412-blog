@@ -8,6 +8,7 @@
       "Models/*": ["models/*"],
       "States/*": ["states/*"],
       "Assets/*": ["src/assets/*"],
+      "Utils/*": ["Utils/*"],
       "Bin/*": ["bin/*"]
     },
     "target": "ES2020",

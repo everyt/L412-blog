@@ -1,4 +1,4 @@
-import { NotFoundPage } from '..';
+import { NotFoundPage } from '../templates';
 
 export default function NotFoundRoute() {
   return (

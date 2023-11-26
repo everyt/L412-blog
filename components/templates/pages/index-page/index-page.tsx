@@ -1,11 +1,12 @@
-import 'Styles/pages/index-page.scss';
-import Introduce from './index-introduce';
+import 'Styles/templates/pages/index-page/index-page.scss';
+
+import Router from './index-router';
 
 export default function IndexPage() {
   return (
     <section className='index-container'>
       <article className='index-article'>
-        <Introduce />
+        <Router />
       </article>
     </section>
   );

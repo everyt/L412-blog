@@ -1,4 +1,4 @@
-import 'Styles/templates/footer-bar.scss';
+import 'Styles/templates/bar/footer-bar/footer-bar.scss';
 
 import Icons from './footer-icons';
 import Copyright from './footer-copyright';
