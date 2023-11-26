@@ -10,6 +10,7 @@ export default function StackWrapper({ icon, color = 'black', size }: IconProps)
   return (
     <div className='index-stack-wrapper'>
       <Icon icon={icon} style={{ color, fontSize: `${size}px` }} />
+      <span></span>
     </div>
   );
 }
