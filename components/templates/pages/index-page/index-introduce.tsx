@@ -3,21 +3,25 @@
 import 'Styles/templates/pages/index-page/index-introduce.scss';
 
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 import { motion } from 'framer-motion';
 
 import { useRecoilState } from 'recoil';
 import { introducePageState } from 'States/introducePageState';
 
+import { useRecoilValue } from 'recoil';
+import { getHueState } from 'States/hueState';
+
 import getFadeInAnimation from 'Utils/getFadeInAnimation';
 
-export default function Introduce() {
+function Introduce() {
+  const hue = useRecoilValue(getHueState);
   const [, setPage] = useRecoilState(introducePageState);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const hancleOnClick = () => {
+  const handleOnClick = () => {
     setPage({
       count: 1,
       flow: 'next',
@@ -25,8 +29,11 @@ export default function Introduce() {
   };
 
   return (
-    <motion.section className='index-introduce-container'>
-      <div className='index-introduce-background1' />
+    <section className='index-introduce-container'>
+      <div
+        className='index-introduce-background1'
+        style={{ background: `linear-gradient(black,  hsla(${hue},45%,65%,1))` }}
+      />
       <img
         src='../../../../src/assets/Photo.png'
         className='index-introduce-img'
@@ -42,6 +49,8 @@ export default function Introduce() {
         }}>
         <span style={getFadeInAnimation(isInView, 1.5, 200)}>
           곽태웅.
+          <br />
+          <span style={{ fontSize: '2rem', color: `hsla(${hue},45%,65%,1)` }}>사람들을 배려하고 지식을 공유하는</span>
           <br />풀 스택 개발자입니다.
         </span>
       </motion.div>
@@ -55,9 +64,11 @@ export default function Introduce() {
           scale: 0.8,
           transition: { duration: 0.3 },
         }}
-        onClick={hancleOnClick}>
+        onClick={handleOnClick}>
         <span style={getFadeInAnimation(isInView, 1.5, 200)}>→</span>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }
+
+export default memo(Introduce);

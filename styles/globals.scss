@@ -1,2 +1,14 @@
 $black: #28282b;
-$white: #f9f6ee;
+$white: #f5f4f3;
+
+.colbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rowbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,14 +3,18 @@
 .index-stacks-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
 }
 .index-stacks-text {
-  margin-top: 45vh;
-  margin-left: 5vw;
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: 900;
+}
+.index-stack-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }

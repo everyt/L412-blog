@@ -14,7 +14,7 @@ const useUpdateUIInterval = () => {
         scrollY: document.body.scrollTop,
       });
     };
-    const intervalId = setInterval(updateUI, 100);
+    const intervalId = setInterval(updateUI, 50);
     return () => clearInterval(intervalId);
   }, [setUIState]);
 

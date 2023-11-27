@@ -2,6 +2,7 @@ import 'Styles/templates/bar/footer-bar/footer-bar.scss';
 
 import Icons from './footer-icons';
 import Copyright from './footer-copyright';
+import Contact from './footer-contact';
 
 export default function FooterBar() {
   return (
@@ -27,6 +28,8 @@ export default function FooterBar() {
           ]}
         />
         <Copyright />
+        <div style={{ marginLeft: '1vw' }} />
+        <Contact />
       </section>
     </footer>
   );

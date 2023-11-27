@@ -1,6 +1,35 @@
 @import '../../../globals.scss';
 
+.index-stack-border {
+  margin: 10px;
+  min-height: 90px;
+  min-width: 90px;
+  border-radius: 100%;
+  border: 1px solid #90857c;
+  background-color: #f5f4f3;
+}
+.index-stack-icon {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+}
+.index-stack-text {
+  margin-right: 10px;
+  letter-spacing: 0.001rem;
+  line-height: 1.4rem;
+  font-weight: 100;
+  font-size: 0.94rem;
+}
+
 .index-stack-wrapper {
+  position: relative;
   display: flex;
-  border: 1px solid $black;
+  justify-content: flex-start;
+  border: 1px solid #272421;
+  border-radius: 20px;
+  align-items: center;
+  background-color: white;
+  margin: 4px;
+  flex-grow: 1;
+  max-width: 30vw;
 }

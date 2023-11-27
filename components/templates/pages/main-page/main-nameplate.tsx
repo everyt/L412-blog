@@ -7,7 +7,7 @@ export default function Nameplate() {
   const hue = useRecoilValue(getHueState);
 
   const handleClickButton = () => {
-    const height = window.innerHeight;
+    const height = document.documentElement.clientHeight;
     window.scrollBy({
       behavior: 'smooth',
       top: height,

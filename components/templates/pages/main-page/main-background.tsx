@@ -16,7 +16,6 @@ type Dot = {
 
 const Background = () => {
   const isMount = useRef(false);
-  const requestId = useRef(0);
 
   const hue = useRecoilValue(getHueState);
 
@@ -32,6 +31,8 @@ const Background = () => {
   let minSpeed = 6;
   let hueDif = 40;
   let glow = 10;
+
+  let requestId = 0;
 
   window.onresize = function () {
     w = ctx.canvas.width = window.innerWidth;
@@ -82,24 +83,11 @@ const Background = () => {
         dots[i].x = w;
       }
     }
-    requestId.current = requestAnimationFrame(render);
+    requestId = requestAnimationFrame(render);
   };
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      if (entries[0].isIntersecting === true) {
-        requestId.current = requestAnimationFrame(render);
-      } else {
-        cancelAnimationFrame(requestId.current);
-      }
-    },
-    { threshold: [0] },
-  );
 
   useEffect(() => {
     if (!isMount.current) {
-      observer.observe(document.querySelector('.main-background-container')!);
-
       isMount.current = true;
 
       w = window.innerWidth;
@@ -120,12 +108,24 @@ const Background = () => {
 
       pushDots(w / 60);
 
-      render();
+      const observer = new IntersectionObserver(
+        function (entries) {
+          if (entries[0].isIntersecting === true) {
+            requestId = requestAnimationFrame(render);
+          } else {
+            cancelAnimationFrame(requestId);
+            return;
+          }
+        },
+        { threshold: [0] },
+      );
+      observer.observe(document.querySelector('#observer')!);
     }
   }, []);
 
   return (
     <div className='main-background-container'>
+      <div id='observer' />
       <div id='bg_glow' />
       <div id='overlay' />
       <div id='overlay2' />
