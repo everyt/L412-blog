@@ -32,7 +32,10 @@ function Introduce() {
     <section className='index-introduce-container'>
       <div
         className='index-introduce-background1'
-        style={{ background: `linear-gradient(black,  hsla(${hue},45%,65%,1))` }}
+        style={{
+          ...getFadeInAnimation(isInView, 1.5, 0),
+          background: `linear-gradient(black,  hsla(${hue},45%,65%,1))`,
+        }}
       />
       <img
         src='../../../../src/assets/Photo.png'

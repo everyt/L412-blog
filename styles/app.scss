@@ -15,3 +15,28 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+
+#observer {
+  &-main {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 47vw;
+    height: 5vh;
+    width: 5vw;
+  }
+  &-index {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 47vw;
+    height: 5vh;
+    width: 5vw;
+  }
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 47vw;
+  height: 5vh;
+  width: 5vw;
+}

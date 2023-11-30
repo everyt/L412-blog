@@ -9,8 +9,8 @@ const useUpdateUIInterval = () => {
     // Function to update the UI state
     const updateUI = () => {
       setUIState({
-        x: window.innerWidth,
-        y: window.innerHeight,
+        width: window.innerWidth,
+        height: window.innerHeight,
         scrollY: document.body.scrollTop,
       });
     };

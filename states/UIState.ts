@@ -3,8 +3,8 @@ import { atom, selector } from 'recoil';
 export const UIState = atom({
   key: 'UIState',
   default: {
-    x: window.innerWidth,
-    y: window.innerHeight,
+    width: window.innerWidth,
+    height: window.innerHeight,
     scrollY: window.scrollY,
   },
 });

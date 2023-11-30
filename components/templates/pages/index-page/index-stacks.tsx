@@ -37,16 +37,15 @@ export default function Stacks() {
         whileTap={{
           scale: 0.8,
           transition: { duration: 0.3 },
-        }}>
+        }}
+        style={{ marginLeft: '30px' }}>
         <span style={getFadeInAnimation(isInView, 3, -1000)}>←</span>
       </motion.div>
-      <div className='colbox' style={{}}>
-        <span className='index-stacks-text'>개발 기술</span>
+      <div className='colbox'>
+        <span className='index-stacks-text'>개발 스택</span>
         <div className='index-stack-container2'>
           <StackWrapper icon='devicon:html5-wordmark' fontSize={72}>
             html으로만 이루어진 정적 웹 페이지를 작성할 수 있습니다.
-            <br />
-            <span style={{ fontWeight: 900, letterSpacing: '3px', fontSize: '12px', lineHeight: '16px' }}></span>
           </StackWrapper>
           <StackWrapper icon='devicon:css3-wordmark' fontSize={72}>
             기본적인 CSS뿐만 아니라, SCSS를 비롯한 슈퍼셋, styled component를 비롯한 인라인 스타일을 작성할 수 있습니다.
@@ -82,7 +81,8 @@ export default function Stacks() {
         whileTap={{
           scale: 0.8,
           transition: { duration: 0.3 },
-        }}>
+        }}
+        style={{ marginRight: '40px' }}>
         <span style={getFadeInAnimation(isInView, 3, 1000)}>→</span>
       </motion.div>
     </section>

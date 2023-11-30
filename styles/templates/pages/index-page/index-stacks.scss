@@ -6,15 +6,30 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 99vw;
 }
 .index-stacks-text {
   font-size: 2rem;
   font-weight: 900;
+  margin-bottom: 20px;
 }
 .index-stack-container2 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+@media (min-width: 1092px) {
+  .index-stack-container2 {
+    min-width: 89vw;
+  }
+}
+
+.colbox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
