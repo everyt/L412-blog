@@ -5,7 +5,7 @@ import { Icon } from '@iconify-icon/react';
 import { useRecoilValue } from 'recoil';
 import { UIState } from 'States/UIState';
 
-type IconProps = {
+type StackProps = {
   icon: string;
   color?: string;
   fontSize: number;
@@ -13,7 +13,7 @@ type IconProps = {
   children: React.ReactNode;
 };
 
-export default function StackWrapper({ icon, color = 'black', fontSize, style, children }: IconProps) {
+export default function Stack({ icon, color = 'black', fontSize, style, children }: StackProps) {
   const ui = useRecoilValue(UIState);
   return (
     <div className='index-stack-wrapper'>

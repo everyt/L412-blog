@@ -16,13 +16,14 @@ import getFadeInAnimation from 'Utils/getFadeInAnimation';
 
 function Introduce() {
   const hue = useRecoilValue(getHueState);
-  const [, setPage] = useRecoilState(introducePageState);
+  const [page, setPage] = useRecoilState(introducePageState);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const handleOnClick = () => {
     setPage({
+      ...page,
       count: 1,
       flow: 'next',
     });
