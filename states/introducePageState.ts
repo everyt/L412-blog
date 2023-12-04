@@ -6,7 +6,6 @@ type PageType = {
     count: number;
     flow: 'next' | 'prev';
     projects: number;
-    fold: 'summary' | 'full';
   };
 };
 
@@ -16,7 +15,6 @@ const pageObject: PageType = {
     count: 0,
     flow: 'next',
     projects: 0,
-    fold: 'summary',
   },
 };
 

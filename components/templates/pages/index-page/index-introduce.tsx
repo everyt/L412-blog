@@ -11,12 +11,14 @@ import { introducePageState } from 'States/introducePageState';
 
 import { useRecoilValue } from 'recoil';
 import { getHueState } from 'States/hueState';
+import { UIState } from 'States/UIState';
 
 import getFadeInAnimation from 'Utils/getFadeInAnimation';
 
 function Introduce() {
   const hue = useRecoilValue(getHueState);
   const [page, setPage] = useRecoilState(introducePageState);
+  const ui = useRecoilValue(UIState);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -34,19 +36,23 @@ function Introduce() {
       <div
         className='index-introduce-background1'
         style={{
-          ...getFadeInAnimation(isInView, 1.5, 0),
           background: `linear-gradient(black,  hsla(${hue},45%,65%,1))`,
         }}
       />
-      <img
+      <motion.img
         src='../../../../src/assets/Photo.png'
         className='index-introduce-img'
         ref={ref}
         style={getFadeInAnimation(isInView, 1.5, -200)}
+        animate={ui.height > 300 ? (ui.width > 900 ? { opacity: 1 } : { opacity: 0 }) : { opacity: 0 }}
       />
-      <div className='index-introduce-img-overlay' style={getFadeInAnimation(isInView, 1.5, -200)} />
       <motion.div
-        className='index-introdue-text'
+        className='index-introduce-img-overlay'
+        style={getFadeInAnimation(isInView, 1.5, -200)}
+        animate={ui.height > 300 ? (ui.width > 900 ? { opacity: 1 } : { opacity: 0 }) : { opacity: 0 }}
+      />
+      <motion.div
+        className='index-introduce-text'
         whileHover={{
           scale: 1.1,
           transition: { duration: 0.3 },
@@ -59,7 +65,7 @@ function Introduce() {
         </span>
       </motion.div>
       <motion.div
-        className='index-introdue-text2'
+        className='index-introduce-text2'
         whileHover={{
           scale: 1.3,
           transition: { duration: 0.3 },
