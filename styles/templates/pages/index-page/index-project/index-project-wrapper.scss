@@ -16,6 +16,7 @@
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 3px;
+  margin: 8px;
 }
 
 .index-project-wrapper-full {
@@ -38,7 +39,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-right: 22px;
+  margin-right: 10px;
 }
 
 .index-project-icon {
@@ -64,10 +65,25 @@
   width: 340px;
   height: 0px;
 }
-
-.index-project-line:after {
-  content: '◆';
-  position: relative;
-  top: -10px;
-  left: calc(100% - 13px);
+@media screen and (max-width: 1270px) {
+  .index-project-line {
+    display: none;
+  }
+  .index-project-description {
+    display: none;
+  }
+  .index-project-wrapper-summary {
+    margin: 2px;
+  }
+}
+@media screen and (max-height: 540px) {
+  .index-project-line {
+    display: none;
+  }
+  .index-project-description {
+    display: none;
+  }
+  .index-project-wrapper-summary {
+    margin: 2px;
+  }
 }

@@ -40,7 +40,9 @@ export default function ProjectList() {
           style={{ marginLeft: '30px' }}>
           <span style={getFadeInAnimation(isInView, 3, -1000)}>←</span>
         </motion.div>
-        <ProjectSet />
+        <div className='index-project-list-wrapper'>
+          <ProjectSet />
+        </div>
         <motion.div
           onClick={() => handleOnClick(1, 'next')}
           className='index-project-list-text'

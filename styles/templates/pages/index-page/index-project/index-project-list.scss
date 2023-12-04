@@ -12,3 +12,10 @@
   font-weight: 900;
   margin-bottom: 20px;
 }
+.index-project-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}

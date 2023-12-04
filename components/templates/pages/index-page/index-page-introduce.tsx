@@ -31,6 +31,14 @@ function Introduce() {
     });
   };
 
+  const hideWhenSmallscreen = !isInView
+    ? { opacity: 0 }
+    : ui.height > 300
+    ? ui.width > 900
+      ? { opacity: 1 }
+      : { opacity: 0 }
+    : { opacity: 0 };
+
   return (
     <section className='index-introduce-container'>
       <div
@@ -43,13 +51,15 @@ function Introduce() {
         src='../../../../src/assets/Photo.png'
         className='index-introduce-img'
         ref={ref}
-        style={getFadeInAnimation(isInView, 1.5, -200)}
-        animate={ui.height > 300 ? (ui.width > 900 ? { opacity: 1 } : { opacity: 0 }) : { opacity: 0 }}
+        style={getFadeInAnimation(isInView, 2, -200)}
+        animate={hideWhenSmallscreen}
+        transition={{ duration: 2 }}
       />
       <motion.div
         className='index-introduce-img-overlay'
-        style={getFadeInAnimation(isInView, 1.5, -200)}
-        animate={ui.height > 300 ? (ui.width > 900 ? { opacity: 1 } : { opacity: 0 }) : { opacity: 0 }}
+        style={getFadeInAnimation(isInView, 1.2, -200)}
+        animate={hideWhenSmallscreen}
+        transition={{ duration: 1 }}
       />
       <motion.div
         className='index-introduce-text'
