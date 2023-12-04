@@ -1,4 +1,4 @@
-import 'Styles/templates/pages/main-page/main-nameplate.scss';
+import 'Styles/templates/pages/main-page/main-page-nameplate.scss';
 
 import { useRecoilValue } from 'recoil';
 import { getHueState } from 'States/hueState';

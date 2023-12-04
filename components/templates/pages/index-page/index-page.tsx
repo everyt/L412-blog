@@ -1,6 +1,6 @@
 import 'Styles/templates/pages/index-page/index-page.scss';
 
-import Router from './index-router';
+import Router from './index-page-router';
 
 import useResizeFocus from 'Hooks/useResizeFocus';
 

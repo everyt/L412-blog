@@ -1,4 +1,4 @@
-import 'Styles/templates/pages/main-page/main-background.scss';
+import 'Styles/templates/pages/main-page/main-page-background.scss';
 
 import { useEffect, useRef } from 'react';
 

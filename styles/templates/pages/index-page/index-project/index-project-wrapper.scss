@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 400px;
+  width: 360px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -25,10 +25,24 @@
   align-items: flex-start;
   width: 640px;
 }
+.index-project-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.index-project-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 22px;
+}
 
 .index-project-icon {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .index-project-description {
@@ -47,7 +61,7 @@
   border-top: 1px solid #444444;
   margin: 0px auto;
   margin-bottom: 10px;
-  width: 380px;
+  width: 340px;
   height: 0px;
 }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import 'Styles/templates/pages/index-page/index-introduce.scss';
+import 'Styles/templates/pages/index-page/index-page-introduce.scss';
 
 import { useInView } from 'framer-motion';
 import { useRef, memo } from 'react';

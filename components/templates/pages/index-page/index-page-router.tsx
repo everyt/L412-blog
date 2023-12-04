@@ -1,6 +1,6 @@
 'use client';
 
-import Introduce from './index-introduce';
+import Introduce from './index-page-introduce';
 import StackList from './index-stack/index-stack-list';
 import ProjectList from './index-project/index-project-list';
 
