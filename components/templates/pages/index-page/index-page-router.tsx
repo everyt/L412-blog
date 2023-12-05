@@ -2,7 +2,7 @@
 
 import Introduce from './index-page-introduce';
 import StackList from './index-stack/index-stack-list';
-import ProjectList from './index-project/index-project-list';
+import ProjectRouter from './index-project/index-project-router';
 
 import { useRecoilState } from 'recoil';
 import { introducePageState } from 'States/introducePageState';
@@ -14,7 +14,7 @@ export default function Router() {
   const [page] = useRecoilState(introducePageState);
   const init = useRef(true);
 
-  const routerVariants = {
+  const variants = {
     entry: (page: { count: number; flow: string }) => ({
       transform:
         init.current && page.count === 0
@@ -37,7 +37,7 @@ export default function Router() {
     }
   };
 
-  const pageList = [<Introduce />, <StackList />, <ProjectList />];
+  const pageList = [<Introduce />, <StackList />, <ProjectRouter />];
 
   const Page = ({ count }: { count: number }) => (
     <motion.div
@@ -46,7 +46,7 @@ export default function Router() {
       initial={'entry'}
       animate='center'
       exit='exit'
-      variants={routerVariants}
+      variants={variants}
       transition={{ ease: 'easeInOut', duration: 2 }}>
       {pageList[count]}
     </motion.div>

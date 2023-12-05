@@ -70,7 +70,9 @@ function Introduce() {
         <span style={getFadeInAnimation(isInView, 1.5, 200)}>
           곽태웅.
           <br />
-          <span style={{ fontSize: '2rem', color: `hsla(${hue},45%,65%,1)` }}>사람들을 배려하고 지식을 공유하는</span>
+          <span style={{ fontSize: '2rem', fontWeight: 900, color: `hsla(${hue},45%,65%,1)` }}>
+            사람들을 배려하고 지식을 공유하는
+          </span>
           <br />풀 스택 개발자입니다.
         </span>
       </motion.div>

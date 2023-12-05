@@ -2,9 +2,8 @@
 
 import 'Styles/templates/pages/index-page/index-stack/index-stack-list.scss';
 
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 import { useRecoilState } from 'recoil';
 import { introducePageState } from 'States/introducePageState';
